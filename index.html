@@ -9,6 +9,21 @@
     <title>Library</title>
 </head>
 <body>
-    
+    <h1>MyBookList</h1>
+    <div class="book-display">
+        <div class="book" id="add-book">
+            <button class="add-book">+</button>
+            <form class="add-book-form">
+                <input type="text" name="title" id="title" placeholder="Book Title" required>
+                <input type="text" name="author" id="author" placeholder="Author" required>
+                <input type="number" name="pages" id="pages" value="123" required>
+                <label for="pages">pages</label><br>
+                <input type="checkbox" name="read" id="read">
+                <label for="read">Read</label><br>
+                <input type="button" name="add-book" value="Add Book" class="book-read">
+                <input type="button" name="cancel-book" value="Cancel" class="book-delete">
+            </form>
+        </div>
+    </div>
 </body>
 </html>

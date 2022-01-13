@@ -1,0 +1,162 @@
+:root {
+    --background-color: #303030;
+    --button-read: #4CAF50;
+    --button-read-hover: #5dd661;
+    --button-not-read: rgb(161, 161, 161);
+    --button-not-read-hover: rgb(235, 235, 235);
+    --button-delete: rgb(255, 30, 30);
+    --button-delete-hover: rgb(255, 66, 66);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin: 30px;
+}
+
+h1 {
+    margin-bottom: 50px;
+}
+
+.add-book-form {
+    display: none;
+}
+
+table,
+th,
+tr {
+    border: 1px solid black;
+}
+
+table {
+    width: 50%;
+    border-collapse: collapse;
+}
+
+.center-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 95vh;
+}
+
+.book-display {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fill, 320px);
+}
+
+.book {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid grey;
+    border-radius: 10px;
+    width: 300px;
+    height: 400px;
+    padding: 30px;
+    text-align: center;
+    font-size: 20px;
+}
+/* 
+.book-title,
+.book-author,
+.book-pages {
+    margin: 40px 0;
+} */
+
+.book-title {
+    font-style: italic;
+    font-size: 30px;
+}
+
+.book-read, .book-not-read, .book-delete {
+    color: inherit;
+    font-size: 20px;
+    padding: 10px 0;
+    width: 130px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    border: 0;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.book-read {
+    background-color: var(--button-read);
+}
+.book-read:hover {
+    background-color: var(--button-read-hover)
+}
+.book-not-read {
+    background-color: var(--button-not-read);
+}
+.book-not-read:hover {
+    background-color: var(--button-not-read-hover);
+    color: black;
+}
+.book-delete {
+    background-color: var(--button-delete);
+}
+.book-delete:hover {
+    background-color: var(--button-delete-hover);
+}
+
+.add-book {
+    background-color: unset;
+    border: inherit;
+    border-radius: inherit;
+    font-size: 100px;
+    color: white;
+    width: 200px;
+    height: 200px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.add-book:hover {
+    background-color: white;
+    border-color: white;
+    color: black;
+}
+
+form input {
+    font-size: 20px;
+    margin: 10px 0;
+    background-color: unset;
+    border: 2px solid grey;
+    border-radius: 10px;
+    color: white;
+    padding: 5px;
+}
+
+form input[type="text"] {
+
+    margin: 20px;
+    width: 200px;
+}
+
+#pages {
+    width: 80px;
+
+}
+
+[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+}
+
+.add-book {
+    position: absolute;
+}
+
+input[type="button"] {
+    margin: 0 0 12px 0;
+}
+
